@@ -21,9 +21,10 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$USER_HOME$/Documents/GitHub/packYourStuff/PackYourStuffPlugin/src/main/resources/plugin.yml" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/plugin.yml" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/plugin.yml" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
-    <output url="file://$USER_HOME$/Documents/GitHub/packYourStuff/PackYourStuffPlugin/out" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
