@@ -1,0 +1,23 @@
+{
+  "simpleHouse" : {
+    "author" : "aemilius",
+    "type" : "wooden House",
+    "size" : "small"
+  },
+  "bigHouse" : {
+    "author" : "aemilius",
+    "type" : "brick House",
+    "size" : "big",
+    "nest" : {
+      "birds" : 2,
+      "eggs" : 3,
+      "inception" : {
+        "diCaprios" : 1,
+        "Oscars" : 1,
+        "loop" : {
+          "theEnd" : 1
+        }
+      }
+    }
+  }
+}
