@@ -1,3 +1,8 @@
 name: PackYourStuff
-main: io.github.IKnowScriptFu.PackYourStuff.PackYourStuff
+description: A plugin to copy, paste and store structures.
+main: io.github.IKnowScriptFu.PackYourStuffPlugin.PackYourStuff
 version: 0.1
+commands:
+  packit:
+    description: select the action for the packit plugin
+    usage: "/packit [save|clone|select|list] [args]\nsave <name> <type>\nselect <index>"
