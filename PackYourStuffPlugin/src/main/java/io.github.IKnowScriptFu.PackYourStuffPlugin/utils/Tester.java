@@ -1,10 +1,9 @@
 package io.github.IKnowScriptFu.PackYourStuffPlugin.utils;
 
+import io.github.IKnowScriptFu.PackYourStuffPlugin.Building;
 import org.json.simple.JSONObject;
-import org.json.simple.JSONValue;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
 import java.util.Set;
 import java.util.Stack;
 
@@ -12,13 +11,9 @@ import java.util.Stack;
  * Created by Aemilius on 06/03/2016.
  */
 public class Tester {
-    private static BlueprintsLoader bl;
+    private static BlueprintsHandler bl;
 
     public static void main(String[] args){
-        bl = new BlueprintsLoader();
-        if(!bl.loadingFailed) {
-            printNestedMap(bl.getAllBlueprints(), 0);
-        }
     }
 
     private static void printNestedMap(JSONObject nest, int depth){

@@ -1,8 +1,9 @@
 {
-  "bigHouse" : {
-    "author" : "aemilius",
-    "type" : "brick House",
-    "size" : "2x2",
-    "structure": [[],[]]
+  "testname": {
+    "author":"emi",
+    "type":"dunno",
+    "frontface":"north",
+    "size": [1, 2, 2],
+    "structure":[ ["JACK_O_LANTERN", 1], ["JACK_O_LANTERN", 1], ["JACK_O_LANTERN", 1], ["JACK_O_LANTERN", 1] ]
   }
 }

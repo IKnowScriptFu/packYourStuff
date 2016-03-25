@@ -10,6 +10,7 @@ import org.bukkit.plugin.Plugin;
 
 import java.util.concurrent.Callable;
 import java.util.function.Function;
+import java.util.stream.Stream;
 
 /**
  * Created by Aemilius on 09/03/2016.
@@ -21,29 +22,28 @@ public class PackingConversation extends ConversationFactory {
         this.callback = callback;
     }
 
-    Function<Player, Void> callback;
+    private Function<Player, Void> callback;
 
-    class confirmationPrompt extends BooleanPrompt{
+    private class confirmationPrompt extends BooleanPrompt{
 
         @Override
         protected Prompt acceptValidatedInput(ConversationContext conversationContext, boolean b) {
+            if(b){
+                callback.apply((Player) conversationContext.getForWhom());
+            }
             return null;
         }
 
         @Override
         public String getPromptText(ConversationContext conversationContext){
-            conversationContext.getForWhom().sendRawMessage("Are you sure you want to do " +
-                "that? Use " + ChatColor.GREEN + "/yes " + ChatColor.WHITE + "to continue or " + ChatColor.RED + "/no "
-                    + ChatColor.WHITE + "to cancel");
-            return null;
+            conversationContext.getForWhom().sendRawMessage("Face the front face of your structure. Then type: " );
+            return ChatColor.GREEN + "y" + ChatColor.WHITE + " or " + ChatColor.RED + "n";
         }
 
         @Override
-        public Prompt acceptInput(ConversationContext context, String input) {
-            if(input.equalsIgnoreCase("/yes")){
-                callback.apply((Player) context.getForWhom());
-            }
-            return null;
+        protected boolean isInputValid(ConversationContext context, String input) {
+            return input.equalsIgnoreCase("y") || input.equalsIgnoreCase("n");
         }
+
     }
 }
